@@ -9,11 +9,11 @@ const App = () => {
   ]);
 
   function handleComplete(id) {
-  
-    const updatedTodos = todos.map(todo => ({
-      ...todo,
-      completed: true
-    }));
+    const updatedTodos = todos.map(todo =>
+      todo.id === id
+        ? { ...todo, completed: true }
+        : todo
+    );
 
     setTodos(updatedTodos);
   }
