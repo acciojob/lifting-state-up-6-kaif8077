@@ -5,7 +5,7 @@ function TodoList({ todos, handleComplete }) {
     <div>
       <h2>Child Component</h2>
       <ul>
-        {todos.map((todo) => (
+        {todos.map(todo => (
           <li key={todo.id}>
             {todo.text}
 
